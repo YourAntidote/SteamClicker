@@ -1,0 +1,158 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: rgb(27,40,56) !important;
+    background: linear-gradient(0deg, rgba(27,40,56,1) 0%, rgba(24,67,83,1) 100%) !important;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}   
+
+.steam-container{
+    width: 100%;
+    height: 100%;
+}
+
+.steam {
+    border: none;
+    background-color: rgba(0, 0, 255, 0);
+
+    width: 100%;
+}
+
+.steam svg {
+    filter: drop-shadow(8px 7px 8px rgba(0, 0, 0, 0.6));
+}
+
+
+.steam:active{
+    transform: scale(0.95);
+}
+
+.steam:active svg{
+    filter: drop-shadow(8px 7px 2px rgba(0, 0, 0, 0.6));
+}
+
+.money {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    color: rgba(197, 195, 192, 1);
+    background-color: #005d9200;
+    resize: none;
+    border: none;
+    overflow: auto;
+}
+.moneyOnClick {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgba(197, 195, 192, 1);
+    background-color: #005d9200;
+    resize: none;
+    border: none;
+    overflow: auto;
+}
+
+.menu-magasin {
+    background-color: rgba(23, 29, 37, 1);
+    overflow-y: auto;
+}
+
+.magasin {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(197, 195, 192, 1);
+    background-color: #005d9200;
+    resize: none;
+    border: none;
+}
+
+.jeux {
+    background: rgb(25,82,117);
+    background: linear-gradient(184deg, rgba(25,82,117,1) 0%, rgba(41,133,172,1) 100%);    
+    border: none;
+    border: 1px solid #024f7c;
+    box-shadow: 3px 5px 6px 1px #0000008a;
+    position: relative;
+}
+.jeux:hover{
+    border: 1px solid #ffff;
+} 
+
+.jeux:active{
+    transform: scale(0.95);
+}
+
+.img-jeux {
+    /*width: 126px;
+    height: 169px;*/
+    width: 100%;
+}
+
+.prix{
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: rgba(192, 238, 17, 1);
+}
+
+.panier {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 50%;left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    font-size: 8rem;
+    opacity: 0;
+    color: rgba(197, 195, 192, 1);
+    transition: opacity 0.1s ease;
+    text-shadow: 0px 3px 3px rgba(59, 59, 59, 0.856);
+}
+.jeux:hover .panier{
+    opacity: 1;
+    transition: opacity 0.1s ease;
+}
+
+.falling-game {
+    position: fixed;
+    top: -100px;
+    width: 80px;
+    height: auto;
+    animation: fall 5s linear forwards;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+@keyframes shakeAndFlash {
+    0% { transform: translateX(0); color: rgba(197, 195, 192, 1); }
+    20% { transform: translateX(-5px); color: red; }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-3px); }
+    80% { transform: translateX(3px); }
+    100% { transform: translateX(0); color: rgba(197, 195, 192, 1); }
+}
+
+.money.shake {
+    animation: shakeAndFlash 0.4s ease;
+}

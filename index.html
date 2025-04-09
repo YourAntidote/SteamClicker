@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perd ton argent</title>
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">   
+</head>
+<body class="d-flex justify-content-center align-content-center">
+    <!--<p class="absolute">Perd ton argent</p>-->
+    <div class="container-fluid flex-column steam-container d-flex justify-content-evenly align-content-center col-9 flex-wrap" style="position: relative;">
+        <div class="d-flex p-0 m-0 flex-column">
+            <p class="money p-0 m-0">0$</p>
+            <div class="d-flex flex-row justify-content-center align-content-center" style="position: relative;">
+                <p class="moneyOnClick m-0 pe-1" style="font-size: 1rem !important; text-align: center;" >À chaque clique : </p>
+                <p class="moneyOnClick p-0 m-0" style="font-size: 1rem !important;" id="click"> +0.01$</p>
+            </div>
+        </div>
+        <button class="steam flex-wrap d-flex justify-content-center align-content-center col-3">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 65 65" fill="#fff"><use xlink:href="#B" x=".5" y=".5"/><defs><linearGradient id="A" x2="50%" x1="50%" y2="100%" y1="0%"><stop stop-color="#111d2e" offset="0%"/><stop stop-color="#051839" offset="21.2%"/><stop stop-color="#0a1b48" offset="40.7%"/><stop stop-color="#132e62" offset="58.1%"/><stop stop-color="#144b7e" offset="73.8%"/><stop stop-color="#136497" offset="87.3%"/><stop stop-color="#1387b8" offset="100%"/></linearGradient></defs><symbol id="B"><g><path d="M1.305 41.202C5.259 54.386 17.488 64 31.959 64c17.673 0 32-14.327 32-32s-14.327-32-32-32C15.001 0 1.124 13.193.028 29.874c2.074 3.477 2.879 5.628 1.275 11.328z" fill="url(#A)"/><path d="M30.31 23.985l.003.158-7.83 11.375c-1.268-.058-2.54.165-3.748.662a8.14 8.14 0 0 0-1.498.8L.042 29.893s-.398 6.546 1.26 11.424l12.156 5.016c.6 2.728 2.48 5.12 5.242 6.27a8.88 8.88 0 0 0 11.603-4.782 8.89 8.89 0 0 0 .684-3.656L42.18 36.16l.275.005c6.705 0 12.155-5.466 12.155-12.18s-5.44-12.16-12.155-12.174c-6.702 0-12.155 5.46-12.155 12.174zm-1.88 23.05c-1.454 3.5-5.466 5.147-8.953 3.694a6.84 6.84 0 0 1-3.524-3.362l3.957 1.64a5.04 5.04 0 0 0 6.591-2.719 5.05 5.05 0 0 0-2.715-6.601l-4.1-1.695c1.578-.6 3.372-.62 5.05.077 1.7.703 3 2.027 3.696 3.72s.692 3.56-.01 5.246M42.466 32.1a8.12 8.12 0 0 1-8.098-8.113 8.12 8.12 0 0 1 8.098-8.111 8.12 8.12 0 0 1 8.1 8.111 8.12 8.12 0 0 1-8.1 8.113m-6.068-8.126a6.09 6.09 0 0 1 6.08-6.095c3.355 0 6.084 2.73 6.084 6.095a6.09 6.09 0 0 1-6.084 6.093 6.09 6.09 0 0 1-6.081-6.093z"/></g></symbol></svg>
+        </button>
+        <img src="./jeux/bande2.png" alt="bande" style="position: absolute; bottom: 0px; left: 0px; z-index: 2;" class="col-12">
+    </div>
+    <div class="container-fluid menu-magasin flex-column col-3 flex-wrap justify-content-center align-content-center">
+        <div class="d-flex magasin flex-column">
+            <p class="pt-4">Magasin</p>
+            <div class="d-flex flex-wrap justify-content-evenly">
+                <button class="jeux col-4 m-2 p-0" value=0.01>  <img class="img-jeux" src="./jeux/1.png "><p class="panier">0</p><p value="0.01"   class="prix p-0 m-0">0.01$</p></button>
+                <button class="jeux col-4 m-2 p-0" value=0.20>  <img class="img-jeux" src="./jeux/2.png"><p class="panier">0</p><p value="0.20"   class="prix p-0 m-0">0.20$</p></button>
+                <button class="jeux col-4 m-2 p-0" value=0.50>  <img class="img-jeux" src="./jeux/3.png"><p class="panier">0</p><p value="0.50"   class="prix p-0 m-0">0.50$</p></button>
+                <button class="jeux col-4 m-2 p-0" value=0.99>  <img class="img-jeux" src="./jeux/4.png"><p class="panier">0</p><p value="0.99"   class="prix p-0 m-0">0.99$</p></button>
+                <button class="jeux col-4 m-2 p-0" value=4.99>  <img class="img-jeux" src="./jeux/5.png"><p class="panier">0</p><p value="4.99"   class="prix p-0 m-0">4.99$</p></button>
+                <button class="jeux col-4 m-2 p-0" value=9.99>  <img class="img-jeux" src="./jeux/6.png"><p class="panier">0</p><p value="9.99"   class="prix p-0 m-0">9.99$</p></button>
+                <button class="jeux col-4 m-2 p-0" value=19.99> <img class="img-jeux" src="./jeux/7.png"><p class="panier">0</p><p value="19.99"  class="prix p-0 m-0">19.99$</p></button>
+                <button class="jeux col-4 m-2 p-0" value=59.99> <img class="img-jeux" src="./jeux/8.png"><p class="panier">0</p><p value="59.99"  class="prix p-0 m-0">59.99$</p></button>
+                <button class="jeux col-4 m-2 p-0" value=99.99> <img class="img-jeux" src="./jeux/9.png"><p class="panier">0</p><p value="99.99"  class="prix p-0 m-0">99.99$</p></button>
+                <button class="jeux col-4 m-2 p-0" value=149.99><img class="img-jeux" src="./jeux/10.png"><p class="panier">0</p><p value="149.99" class="prix p-0 m-0">149.99$</p></button>
+                <button class="jeux col-4 m-2 p-0" value=199.99><img class="img-jeux" src="./jeux/11.png"><p class="panier">0</p><p value="199.99" class="prix p-0 m-0">199.99$</p></button>
+                <button class="jeux col-4 m-2 p-0" value=249.99><img class="img-jeux" src="./jeux/12.png"><p class="panier">0</p><p value="249.99" class="prix p-0 m-0">249.99$</p></button>
+                <button class="jeux col-4 m-2 p-0" value=499.99><img class="img-jeux" src="./jeux/13.png"><p class="panier">0</p><p value="499.99" class="prix p-0 m-0">499.99$</p></button>
+                <button class="jeux col-4 m-2 p-0" value=999.99><img class="img-jeux" src="./jeux/14.png"><p class="panier">0</p><p value="999.99" class="prix p-0 m-0">999.99$</p></button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
